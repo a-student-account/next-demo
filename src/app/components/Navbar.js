@@ -1,12 +1,30 @@
 import Button from './Button'
+import Tag from './Tag'
+
+const navigationButtons = [
+  {
+    title: 'Home',
+    href: '/',
+    isNew: false
+  },
+  {
+    title: 'About',
+    href: '/about',
+    isNew: true
+  }
+]
 
 export default function Navbar() {
   return (
     <nav className="flex justify-between bg-indigo-50 p-6 items-center sticky top-0 shadow-lg">
       <div className="logo bg-indigo-600 rounded-full p-6 hover:scale-105 transition-all cursor-pointer"></div>
       <div className="flex gap-x-4 items-center">
-        <Button title="Home" href="/" />
-        <Button title="About" href="/about" />
+        {navigationButtons.map(({ title, href, isNew}) => 
+          <Button href = {href} key = {title} classNameProp='flex'>
+            {title}
+            {isNew && <Tag classNames='ml-2 animate-pulse'/>}
+          </Button>
+        )}
       </div>
     </nav>
   )
