@@ -28,7 +28,7 @@ export default function Content({ content, randomColorOnHover }) {
     return (
       <p className="my-5">
         {seperatedText.map((word, index) => (
-          <span key={index} className={`${colors[Math.floor(Math.random() * colors.length)]} hover:font-bold`}>
+          <span key={index} className={`${colors[Math.floor(Math.random() * colors.length)]} hover:font-bold transition`}>
             {word}
           </span>
         ))}

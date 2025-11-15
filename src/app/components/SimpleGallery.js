@@ -6,7 +6,7 @@ import 'photoswipe/style.css'
 import Image from 'next/image.js'
 
 export default function SimpleGallery(props) {
-  
+
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
         gallery: '#' + props.galleryID,
@@ -34,7 +34,7 @@ export default function SimpleGallery(props) {
           rel="noreferrer"
         >
           <Image
-            className={`rounded hover:brightness-110 hover:contrast-150 contrast-125 brightness-105`}
+            className={`rounded hover:brightness-110 hover:contrast-150 contrast-125 brightness-105 transition`}
             src={image.largeURL}
             width={image.width}
             height={image.height}
