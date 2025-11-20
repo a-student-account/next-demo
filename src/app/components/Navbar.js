@@ -5,15 +5,20 @@ import { AcademicCapIcon } from '@heroicons/react/24/solid'
 */
 const navigationButtons = [
   {
-    title: 'Home',
-    href: '/',
-    isNew: false
+    title: 'Blog',
+    href: '/blog',
+    isNew: true,
   },
   {
     title: 'About',
     href: '/about',
-    isNew: true
-  }
+    isNew: false
+  },
+  {
+    title: 'Home',
+    href: '/',
+    isNew: false
+  },
 ]
 
 export default function Navbar() {

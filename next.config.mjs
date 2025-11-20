@@ -9,9 +9,8 @@ const nextConfig = {
         pathname: '**',
       },
     ],
-  },
+  }, // dont forget the comma here
+  pageExtensions: ['js', 'jsx', 'mdx'],
+}
 
-};
-
-
-export default nextConfig;
+export default nextConfig
